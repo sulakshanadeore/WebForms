@@ -1,0 +1,89 @@
+
+WEb Forms Architecture:
+1) Event - driven programming
+2) control-- events,properties and methods which is enclosed in the class of the control.
+
+using System.Web;  --- Web namespaces
+using System.Web.UI; ----> UI part---- page
+
+UI consists of 2 parts
+1) Design---> .aspx
+		2 parts----- Design view (drag and drop)
+			     Source View(html)
+
+2) Code----> .aspx.cs ( Code behind)
+
+At Runtime:
+
+1) Single class is formed out of 2 partial classes and then a object is created.
+2) Page tree is created...
+
+
+
+above 2 files(Design/source code & code behind) work in conjunction with each other
+and so both are having a class metnioned as "Partial" with them. 
+
+When the page loads it when the page load event occurs, then  I want to set
+the textbox text property to "Hello Admin"
+
+TextBox1.Text="Hello Admin"
+
+
+event--- happenning----
+button obejct ->click event
+Delegate----->  calls--->method(button click method must fire)
+
+
+
+
+Life cycle: Events fire in a sequence on their own, and so we have a attribute in the
+ page/form --> auto event wireup=true
+Page
+1) PreInit----> Prior to Initialization
+2) Init-----> Initialization started
+3) InitComplete----> Initialization completd
+4) Load---load started
+5) LoadComplete--- load completed
+6) Other events realted to the controls on the page follow like click,mouse move, etc
+
+
+
+If the page is going to the server and coming back again to the clinet(browser) the 
+event whihc causes the page to go to the server is called as "postback" which happens 
+when u click a "run at=server" attribute object.
+When the postback occurs the page RE-LOADS.
+A Postback is available for every control on the page/form.
+Button has "Postback" enabled by default.
+
+But for some controls it is not enabled by default like the button.
+
+using System.Web.UI.Controls;   ------> Controls on the page
+
+
+WebForms		    				MVC
+Donot have folder structure			Has folder structure
+Has a postback					has a http Post
+Event Driven					Separation of concerns, MVC Pattern
+Has Multiple files for one form                 has multiple actions
+
+Page-class
+Properties, events and methods
+Control-- class
+Properties, events and methods
+Partial Page                         
+Web.config					Web.config
+
+Aspx extension along with .cs			.cshtml	(Views are created by Razor Engine)
+Life cycle events 				
+
+
+
+
+
+
+
+
+
+
+
+
