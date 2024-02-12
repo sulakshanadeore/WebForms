@@ -1,0 +1,52 @@
+1) PArtial View
+2) Validations
+3) Exception Handling
+
+1) PArtial View:
+Render:
+A)     Html.RenderPartial("_Partial1"): It is directly written to http response,
+uses a TextWriter class to write data to the view.
+RenderPartial returns void and so we write  semicolon at the end, and so inlcude it in @{}
+
+<div style="background-color:yellow;width:500px;height:200px">
+@{
+    Html.RenderPartial("_Partial1");
+        }
+</div>
+
+B)     @Html.Partial("_Partial1"): this is  a method that renders the view as html encoded string,
+we can store the method result in a string variable.
+
+<div style="background-color:yellow;width:500px;height:200px">
+    @Html.Partial("_Partial1")
+</div>
+
+
+ChildActiononly: means that action is not an independent action it is dependent on the parent ie some other action has to call it.
+1) @Html.RenderAction("_Partial");
+2) is a 
+
+Views Vs Partial Views--Differences Find them
+Views have layout pages,
+Partial donot have layout pages
+-------------------------------------------------------------
+
+
+
+Exception Handling
+1) try -catch
+2) Overriding OnException method
+3) [HandleError] Attribute
+4) Global Exception Handling Filter
+5) Handling Application_Event
+6) Extending  [HandleError] Attribute
+
+---------------------------------------------
+
+
+ Action REsult
+
+1) View
+2) Content
+3) PArtial
+4) Json
